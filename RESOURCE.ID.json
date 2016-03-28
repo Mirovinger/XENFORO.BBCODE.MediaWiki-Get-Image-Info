@@ -1,0 +1,26 @@
+{
+  "id": "csiXF_bbCode_E04235F2",
+  "name": "(CSI/XF/BBCODE) MediaWiki: Get Image Info",
+  "description": "Запрос данных изображения из MediaWiki.",
+  "version": "1.0.0",
+  "type": "xenforo-bbcode",
+  "keywords": [
+    "xenforo",
+    "bbcode",
+    "add-on"
+  ],
+  "homepage": "http://cyberspace.industries/",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Kitsune Solar",
+      "email": "msg@kitsune.solar",
+      "homepage": "http://kitsune.solar/"
+    }
+  ],
+  "support": {
+    "source": "",
+    "issues": "http://cyberspace.community/",
+    "forum": "http://cyberspace.community/"
+  }
+}

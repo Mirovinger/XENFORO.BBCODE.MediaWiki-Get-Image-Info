@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="csiXF_bbCode_E04235F2" title="(CSI/XF/BBCODE) MediaWiki: Get Image Info" version_string="1.0.0" version_id="1" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="csiXF_bbCode_E04235F2" display_order="99999999" debug_only="0"/>
+    <option option_id="csiXF_bbCode_E04235F2_onoff" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_E04235F2" display_order="1"/>
+    </option>
+    <option option_id="csiXF_bbCode_E04235F2_urlApi" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_E04235F2" display_order="2"/>
+    </option>
+    <option option_id="csiXF_bbCode_E04235F2_iiprop" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[url|size|timestamp|user]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_E04235F2" display_order="3"/>
+    </option>
+    <option option_id="csiXF_bbCode_E04235F2_iiurlwidth" edit_format="spinbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[200]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_bbCode_E04235F2" display_order="3"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="csiXF_bbCode_E04235F2_title" version_id="1" version_string="1.0.0"><![CDATA[Название:]]></phrase>
+    <phrase title="csiXF_bbCode_E04235F2_size" version_id="1" version_string="1.0.0"><![CDATA[Размер:]]></phrase>
+    <phrase title="csiXF_bbCode_E04235F2_date" version_id="1" version_string="1.0.0"><![CDATA[Дата загрузки:]]></phrase>
+    <phrase title="csiXF_bbCode_E04235F2_uploader" version_id="1" version_string="1.0.0"><![CDATA[Загрузил:]]></phrase>
+    <phrase title="custom_bb_code_wiki_img_title" version_id="1" version_string="1.0.0"><![CDATA[MediaWiki: Информация об изображении]]></phrase>
+    <phrase title="custom_bb_code_wiki_img_desc" version_id="1" version_string="1.0.0"><![CDATA[Запрос данных изображения из MediaWiki.]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_onoff" version_id="1" version_string="1.0.0"><![CDATA[Активировать]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_onoff_explain" version_id="1" version_string="1.0.0"><![CDATA[Включение / отключение обработки тега.]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_urlApi" version_id="1" version_string="1.0.0"><![CDATA[Путь к API]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_urlApi_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите URL по которому доступен "api.php" MediaWiki.
+<br/>Пример: <code>https://en.wikipedia.org/w/api.php</code>]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_iiprop" version_id="1" version_string="1.0.0"><![CDATA[Данные запроса]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_iiprop_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите данные, которые будут переданы запросу.
+<br/>Пример: <code>url|size|timestamp</code>]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_iiurlwidth" version_id="1" version_string="1.0.0"><![CDATA[Размер миниатюры]]></phrase>
+    <phrase title="option_csiXF_bbCode_E04235F2_iiurlwidth_explain" version_id="1" version_string="1.0.0"><![CDATA[Введите размер миниатюры изображения.]]></phrase>
+    <phrase title="option_group_csiXF_bbCode_E04235F2" version_id="1" version_string="1.0.0"><![CDATA[(CSI/XF/BBCODE) MediaWiki: Информация об изображении]]></phrase>
+    <phrase title="option_group_csiXF_bbCode_E04235F2_description" version_id="1" version_string="1.0.0"><![CDATA[Запрос данных изображения из MediaWiki.
+<br/>Разработано в <a title="Создание стилей и дополнений для XenForo" class="csiXF_crGlobal csiXF_crAdmin csiXF_crOptions Tooltip" href="http://cyberspace.industries/">&quot;CYBERSPACE.Industries&quot;</a>.]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_bbCode_E04235F2_tag_wiki_img" version_id="1" version_string="1.0.0"><![CDATA[<xen:require css="csiXF_bbCode_E04235F2.css" />
+<a title="{xen:phrase csiXF_bbCode_E04235F2_title} {xen:raw $title}
+          {xen:if $size, ':: {xen:phrase csiXF_bbCode_E04235F2_size} {xen:raw $size}'}
+          {xen:if $timestamp, ':: {xen:phrase csiXF_bbCode_E04235F2_date} {xen:raw $timestamp}'}
+          {xen:if $user, ':: {xen:phrase csiXF_bbCode_E04235F2_uploader} {xen:raw $user}'}"
+          class="csiXF_bbCode_E04235F2 bbCodeWikiImg externalLink Tooltip" href="{xen:raw $url}">
+  <img class="csiXF_bbCode_E04235F2 bbCodeWikiImg" src="{xen:raw $thumburl}" alt="" />
+</a>]]></template>
+    <template title="csiXF_bbCode_E04235F2.css" version_id="1" version_string="1.0.0"><![CDATA[a.bbCodeWikiImg {
+  display: inline-block;
+}]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes>
+    <bb_code bb_code_id="wiki_img" bb_code_mode="callback" has_option="no" callback_class="CSI\BbCodeMediaWikiGetImageInfo\BbCode\Formatter\Base" callback_method="getBbCodeMediaWikiGetImageInfo" option_regex="" trim_lines_after="0" plain_children="1" disable_smilies="1" disable_nl2br="1" disable_autolink="1" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+  </bb_codes>
+</addon>
